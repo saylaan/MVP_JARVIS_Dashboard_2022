@@ -1,0 +1,40 @@
+{
+    "name": "server",
+    "version": "0.0.1",
+    "description": "Back-end of J.A.R.V.I.S home controller",
+    "main": "index.js",
+    "scripts": {
+        "start": "node_modules/nodemon/bin/nodemon.js src/app.js --exec 'npm run lint && node'",
+        "lint": "true || node_modules/.bin/eslint \"**/*.js\"",
+        "seed": "node ./seeds"
+    },
+    "keywords": [
+        "nodejs",
+        "express",
+        "back"
+    ],
+    "author": "J.A.R.V.I.S",
+    "license": "Epitech",
+    "devDependencies": {},
+    "dependencies": {
+        "axios": "^0.24.0",
+        "bluebird": "^3.5.3",
+        "body-parser": "^1.18.3",
+        "cors": "^2.8.5",
+        "eslint": "^8.1.0",
+        "express": "^4.17.1",
+        "https": "^1.0.0",
+        "ipaddr": "^0.1.0",
+        "joi": "^17.4.2",
+        "jsonwebtoken": "^8.5.0",
+        "morgan": "^1.10.0",
+        "multer": "^1.4.2",
+        "nodemon": "^2.0.14",
+        "passport": "^0.5.0",
+        "passport-jwt": "^4.0.0",
+        "sequelize": "^6.8.0",
+        "socket.io": "^4.4.0",
+        "sqlite3": "^5.0.2",
+        "winston": "^3.2.1"
+    }
+}

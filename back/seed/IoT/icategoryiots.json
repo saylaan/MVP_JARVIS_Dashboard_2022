@@ -1,0 +1,19 @@
+[{
+    "ICategoryId": 2,
+    "IoTId": 1
+}, {
+    "ICategoryId": 2,
+    "IoTId": 2
+}, {
+    "ICategoryId": 2,
+    "IoTId": 3
+},{
+    "ICategoryId": 1,
+    "IoTId": 4
+}, {
+    "ICategoryId": 1,
+    "IoTId": 5
+}, {
+    "ICategoryId": 1,
+    "IoTId": 6
+}]
