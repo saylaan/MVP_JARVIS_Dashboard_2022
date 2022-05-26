@@ -1,75 +1,71 @@
-const { Scenario } = require('../../models')
+const { Scenario } = require('../../models');
 
 module.exports = {
     async index(req, res) {
         try {
-            let scenarios = null
-            const search = req.query.search
+            let scenarios = null;
+            const search = req.query.search;
             if (search) {
                 scenarios = await Scenario.findAll({
                     where: {
                         name: search
                     }
-                })
+                });
             } else {
                 scenarios = await Scenario.findAll({
                     limit: 100
-                })
+                });
             }
-            res.send(scenarios)
+            res.send(scenarios);
         } catch (err) {
             res.status(500).send({
-                err: 'An error has occured while trying to fetch all the scenario'
-            })
+                err: 'An error has occured while trying to fetch all the Scenario'
+            });
         }
     },
     async getScenario(req, res) {
         try {
-            const scenario = await Scenario.findByPk(req.params.scenarioId)
+            const scenario = await Scenario.findByPk(req.params.scenarioId);
             if (!scenario) {
                 return res.status(403).send({
-                    error: 'The scenario does not exist'
-                })
+                    error: 'The Scenario does not exist'
+                });
             }
-            res.send(scenario)
+            res.send(scenario);
         } catch (err) {
             res.status(500).send({
-                err: 'An error has occured while trying to get the scenario'
-            })
+                err: 'An error has occured while trying to get the Scenario'
+            });
         }
     },
     async post(req, res) {
         try {
-            // const userId = req.params.userId
             const newscenario = {
-                file_name: req.body.file_name
-            }
-            const scenario = await Scenario.create(newscenario)
-            // await ScenarioUser.create({
-            //     UserId: userId,
-            //     scenarioId: scenario.id
-            // })
-            res.send(scenario)
+                name: req.body.name,
+                description: req.body.description
+            };
+            const scenario = await Scenario.create(newscenario);
+            res.send(scenario);
         } catch (err) {
             res.status(500).send({
-                error: 'An error has occured while trying to create a new scenario'
-            })
+                error: 'An error has occured while trying to create a new Scenario'
+            });
         }
     },
     async delete(req, res) {
         try {
-            const scenario = await Scenario.findByPk(req.params.scenarioId)
+            const scenario = await Scenario.findByPk(req.params.scenarioId);
             if (!scenario) {
                 return res.status(403).send({
-                    error: 'The scenario does not exist'
-                })
+                    error: 'The Scenario does not exist'
+                });
             }
-            await scenario.destroy()
-            res.send(scenario)
+            await scenario.destroy();
+            res.send(scenario);
         } catch (err) {
             res.status(500).send({
-                error: 'An error has occured while trying to delete the scenario'
-            })
+                error: 'An error has occured while trying to delete the Scenario'
+            });
         }
     },
     async put(req, res) {
@@ -78,12 +74,12 @@ module.exports = {
                 where: {
                     id: req.params.scenarioId
                 }
-            })
-            res.send(scenario)
+            });
+            res.send(scenario);
         } catch (err) {
             res.status(500).send({
-                err: 'An error has occured while trying to update the scenario'
-            })
+                err: 'An error has occured while trying to update the Scenario'
+            });
         }
     }
-}
+};

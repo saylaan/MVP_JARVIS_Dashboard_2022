@@ -1,10 +1,10 @@
 module.exports = (sequelize, DataTypes) => {
-    const ICategoryIoT = sequelize.define('ICategoryIoT', {})
-    
-    ICategoryIoT.associate = function(models) {
-        ICategoryIoT.belongsTo(models.IoT)
-        ICategoryIoT.belongsTo(models.ICategory)
-    }
+    const ICategoryIoT = sequelize.define('ICategoryIoT', {});
 
-    return ICategoryIoT
-}
+    ICategoryIoT.associate = function (models) {
+        ICategoryIoT.belongsTo(models.IoT);
+        ICategoryIoT.belongsTo(models.ICategory);
+    };
+
+    return ICategoryIoT;
+};

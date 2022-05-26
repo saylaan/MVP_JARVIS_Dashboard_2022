@@ -1,11 +1,13 @@
 module.exports = (sequelize, DataTypes) => {
     const Scenario = sequelize.define('Scenario', {
-        file_name: {
+        name: {
             type: DataTypes.STRING,
             allowNull: false,
             unique: true
-        }
-    })
-    
-    return Scenario
-}
+        },
+        description: DataTypes.STRING,
+        activate: false
+    });
+
+    return Scenario;
+};

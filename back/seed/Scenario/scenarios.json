@@ -1,7 +1,23 @@
-[{
-    "file_name": "sceneario-1"
-}, {
-    "file_name": "sceneario-2"
-}, {
-    "file_name": "sceneario-3"
-}]
+[
+    {
+        "name": "sceneario-1",
+        "description": "This scenario is made for turning a lamp within a period"
+        
+    },
+    {
+        "name": "sceneario-2",
+        "description": "This scenario is made for turning a device upon a motion event and within a period"
+    },
+    {
+        "name": "sceneario-3",
+        "description": "This scenario is made for turning a device upon a light event and within a period"
+    },
+    {
+        "name": "sceneario-4",
+        "description": "This scenario is made for turning a device upon a motion event"
+    },
+    {
+        "name": "sceneario-5",
+        "description": "This scenario is made for turning a device upon a light event"
+    }
+]

@@ -1,19 +1,22 @@
-[{
-    "ICategoryId": 2,
-    "IoTId": 1
-}, {
-    "ICategoryId": 2,
-    "IoTId": 2
-}, {
-    "ICategoryId": 2,
-    "IoTId": 3
-},{
-    "ICategoryId": 1,
-    "IoTId": 4
-}, {
-    "ICategoryId": 1,
-    "IoTId": 5
-}, {
-    "ICategoryId": 1,
-    "IoTId": 6
-}]
+[
+    {
+        "ICategoryId": 1,
+        "IoTId": 1
+    },
+    {
+        "ICategoryId": 2,
+        "IoTId": 2
+    },
+    {
+        "ICategoryId": 3,
+        "IoTId": 3
+    },
+    {
+        "ICategoryId": 4,
+        "IoTId": 4
+    },
+    {
+        "ICategoryId": 5,
+        "IoTId": 5
+    }
+]

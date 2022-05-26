@@ -1,108 +1,104 @@
-const { RoomIoT, Room, IoT } = require('../../models')
-const _ = require('lodash')
+const { RoomIoT, Room, IoT } = require('../../models');
+const _ = require('lodash');
 
 module.exports = {
     async index(req, res) {
         try {
             const roomiots = await RoomIoT.findAll({
-                include: [{
-                        model: Room,
+                include: [
+                    {
+                        model: Room
                     },
                     {
-                        model: IoT,
-                    },
-                ],
-            })
-            res.send(roomiots)
+                        model: IoT
+                    }
+                ]
+            });
+            res.send(roomiots);
         } catch (err) {
             res.status(500).send({
-                err: 'An error has occured while trying to get the Rooms Devices',
-            })
+                err: 'An error has occured while trying to get the RoomIoTs'
+            });
         }
     },
     async getRoomIoTs(req, res) {
         try {
             const roomiots = await RoomIoT.findAll({
                 where: {
-                    RoomId: req.params.roomId,
+                    RoomId: req.params.roomId
                 },
-                include: [{
-                        model: Room,
+                include: [
+                    {
+                        model: Room
                     },
                     {
-                        model: IoT,
-                    },
-                ],
-            })
-            res.send(roomiots)
+                        model: IoT
+                    }
+                ]
+            });
+            res.send(roomiots);
         } catch (err) {
             res.status(500).send({
-                err: 'An error has occured while trying to get the Room Devices',
-            })
+                err: 'An error has occured while trying to get the RoomIoTs'
+            });
         }
     },
     async getIoTRooms(req, res) {
         try {
             const iotrooms = await RoomIoT.findAll({
                 where: {
-                    IoTId: req.params.iotId,
+                    IoTId: req.params.iotId
                 },
-                include: [{
-                    model: IoT,
-                }, {
-                    model: Room,
-                }],
-            })
-            res.send(iotrooms)
+                include: [
+                    {
+                        model: IoT
+                    },
+                    {
+                        model: Room
+                    }
+                ]
+            });
+            res.send(iotrooms);
         } catch (err) {
             res.status(500).send({
-                err: 'An error has occured while trying to get the Device Rooms',
-            })
+                err: 'An error has occured while trying to get the IoTRooms'
+            });
         }
     },
     async post(req, res) {
         try {
-            const { RoomId, IoTId } = req.body
+            const { RoomId, IoTId } = req.body;
             const roomiot = await RoomIoT.create({
                 RoomId: RoomId,
-                IoTId: IoTId,
-            })
-            res.send(roomiot)
+                IoTId: IoTId
+            });
+            res.send(roomiot);
         } catch (err) {
             res.status(500).send({
-                err: 'An error has occured while trying to create the Room for the Device',
-            })
+                err: 'An error has occured while trying to create the RoomIoT'
+            });
         }
     },
     async delete(req, res) {
         try {
-            const { roomiotId } = req.params
+            const { roomiotId } = req.params;
 
             const roomiot = await RoomIoT.findOne({
                 where: {
-                    id: roomiotId,
-                },
-            })
+                    id: roomiotId
+                }
+            });
             if (!roomiot) {
                 return res.status(403).send({
-                    error: 'you do not have access to this Room Device',
-                })
+                    error: 'you do not have access to this RoomIoT'
+                });
             }
-            // await RoomIoT.findAll({
-            //     where: {
-            //         RoomId: roomIoT.RoomId,
-            //     },
-            // }).then((roomiots) => {
-            //     roomiots.forEach(async roomiot => {
-            //         await roomIoT.destroy()
-            //     });
-            // });
-            await roomiot.destroy()
-            res.send(roomiot)
+            await roomiot.destroy();
+            res.send(roomiot);
         } catch (err) {
             res.status(500).send({
-                err: 'An error has occured while trying to delete the Room Device',
-            })
+                err: 'An error has occured while trying to delete the RoomIoT'
+            });
         }
     },
     async put(req, res) {
@@ -111,12 +107,12 @@ module.exports = {
                 where: {
                     id: req.params.roomiotId
                 }
-            })
-            res.send(roomiot)
+            });
+            res.send(roomiot);
         } catch (err) {
             res.status(500).send({
-                err: 'An error has occured while trying to update the Room Device'
-            })
+                err: 'An error has occured while trying to update the RoomIoT'
+            });
         }
     }
-}
+};

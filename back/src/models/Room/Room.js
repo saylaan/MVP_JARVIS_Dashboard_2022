@@ -1,7 +1,10 @@
 module.exports = (sequelize, DataTypes) => {
     const Room = sequelize.define('Room', {
-        name: DataTypes.STRING,
-    })
-    
-    return Room
-}
+        name: {
+            type: DataTypes.STRING,
+            unique: true
+        }
+    });
+
+    return Room;
+};

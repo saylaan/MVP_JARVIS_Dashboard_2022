@@ -1,0 +1,34 @@
+[
+    {
+        "socketId": "DyC-PPZK9sioovLDAAAG",
+        "value": "IGNORED",
+        "start_date": "2022-04-08",
+        "end_date": "2022-05-08",
+        "start_hour": "14:00",
+        "end_hour": "15:00"
+    },
+    {
+        "socketId": "DyC-PPZK9sioovLDAAAG",
+        "value": "IGNORED",
+        "start_date": "2022-04-08",
+        "end_date": "2022-05-08",
+        "start_hour": "14:00",
+        "end_hour": "15:00"
+    },
+    {
+        "socketId": "DyC-PPZK9sioovLDAAZZ",
+        "value": "IGNORED",
+        "start_date": "2022-04-08",
+        "end_date": "2022-05-08",
+        "start_hour": "14:00",
+        "end_hour": "15:00"
+    },
+    {
+        "socketId": "DyC-PPZK9sioovLDAAAG",
+        "value": "IGNORED"
+    },
+    {
+        "socketId": "DyC-PPZK9sioovLDAAZZ",
+        "value": "IGNORED"
+    }
+]

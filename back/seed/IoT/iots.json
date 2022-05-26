@@ -1,55 +1,52 @@
-[{
-    "name": "interuptor-x-100",
-    "mac": "00:00:5e:00:53:af",
-    "type": "sensor",
-    "category": "interuptor",
-    "version": "1.0",
-    "details": "interuptor-x-100 with mac address 00:00:5e:00:53:af part of interuptor with version 1.0",
-    "status": "PAIRED",
-    "socketId": "DyC-PPZK9sioovLDAAAG"
-}, {
-    "name": "interuptor-x-100",
-    "mac": "00:00:5e:00:54:af",
-    "type": "sensor",
-    "category": "interuptor",
-    "version": "1.0",
-    "details": "interuptor-x-100 with mac address 00:00:5e:00:54:af part of interuptor with version 1.0",
-    "status": "IGNORED",
-    "socketId": "DyC-PPZK9sioovLDAAEE"
-}, {
-    "name": "interuptor-x-100",
-    "mac": "00:00:5e:00:55:af",
-    "type": "sensor",
-    "category": "interuptor",
-    "version": "1.0",
-    "details": "interuptor-x-100 with mac address 00:00:5e:00:55:af part of interuptor with version 1.0",
-    "status": "UNPAIRED",
-    "socketId": "DyC-PPZK9sioovLDAAZZ"
-},{
-    "name": "light-x-100",
-    "mac": "00:00:5e:00:56:af",
-    "type": "device",
-    "category": "light",
-    "version": "1.0",
-    "details": "light-x-100 with mac address 00:00:5e:00:56:af part of light with version 1.0",
-    "status": "PAIRED",
-    "socketId": "DyC-PPZK9sioovLDAAHH"
-}, {
-    "name": "light-x-100",
-    "mac": "00:00:5e:00:57:af",
-    "type": "device",
-    "category": "light",
-    "version": "1.0",
-    "details": "light-x-100 with mac address 00:00:5e:00:57:af part of light with version 1.0",
-    "status": "IGNORED",
-    "socketId": "DyC-PPZK9sioovLDAARR"
-}, {
-    "name": "light-x-100",
-    "mac": "00:00:5e:00:58:af",
-    "type": "device",
-    "category": "light",
-    "version": "1.0",
-    "details": "light-x-100 with mac address 00:00:5e:00:58:af part of light with version 1.0",
-    "status": "UNPAIRED",
-    "socketId": "DyC-PPZK9sioovLDAXXXG"
-}]
+[
+    {
+        "name": "lamp-x-100",
+        "mac": "00:00:5e:00:53:af",
+        "type": "device",
+        "category": "light",
+        "version": "1.0",
+        "details": "lamp-x-100 with mac address 00:00:5e:00:53:af part of light with version 1.0",
+        "status": "PAIRED",
+        "socketId": "DyC-PPZK9sioovLDAAAG"
+    },
+    {
+        "name": "fan-x-100",
+        "mac": "00:00:5e:00:55:af",
+        "type": "device",
+        "category": "fan",
+        "version": "1.0",
+        "details": "led-x-100 with mac address 00:00:5e:00:55:af part of fan with version 1.0",
+        "status": "PAIRED",
+        "socketId": "DyC-PPZK9sioovLDAAZZ"
+    },
+    {
+        "name": "light-sensor-x-100",
+        "mac": "00:00:5e:00:56:af",
+        "type": "sensor",
+        "category": "lightsensor",
+        "version": "1.0",
+        "details": "light-x-100 with mac address 00:00:5e:00:56:af part of lightsensor with version 1.0",
+        "status": "PAIRED",
+        "socketId": "DyC-PPZK9sioovLDAAHH"
+    },
+    {
+        "name": "motion-sensor-x-100",
+        "mac": "00:00:5e:00:57:af",
+        "type": "sensor",
+        "category": "motionsensor",
+        "version": "1.0",
+        "details": "motion-sensor-x-100 with mac address 00:00:5e:00:57:af part of motionsensor with version 1.0",
+        "status": "PAIRED",
+        "socketId": "DyC-PPZK9sioovLDAARR"
+    },
+    {
+        "name": "interuptor-sensor-x-100",
+        "mac": "00:00:5e:00:88:af",
+        "type": "sensor",
+        "category": "interuptorsensor",
+        "version": "1.0",
+        "details": "interuptor-sensor-x-100 with mac address 00:00:5e:00:57:af part of interuptor sensor with version 1.0",
+        "status": "PAIRED",
+        "socketId": "DyC-PPZK9sioovLDAXXXAAAA"
+    }
+]

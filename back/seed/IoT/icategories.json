@@ -1,5 +1,22 @@
-[{
-    "name": "light"
-}, {
-    "name": "interuptor"
-}]
+[
+    {
+        "name": "Light",
+        "description": "Lamp device to use in a room"
+    },
+    {
+        "name": "Fan",
+        "description": "Fan device to use in a room"
+    },
+    {
+        "name": "Light sensor",
+        "description": "Sensor to measure light intensity"
+    },
+    {
+        "name": "Motion sensor",
+        "description": "Sensor to measure the motion"
+    },
+    {
+        "name": "Interuptor",
+        "description": "Sensor to activate or disactivate a device"
+    }
+]

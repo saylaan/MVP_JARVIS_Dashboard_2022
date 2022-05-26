@@ -1,0 +1,22 @@
+[
+    {
+        "ScenarioId": "1",
+        "ConditionId": "1"
+    },
+    {
+        "ScenarioId": "2",
+        "ConditionId": "2"
+    },
+    {
+        "ScenarioId": "3",
+        "ConditionId": "3"
+    },
+    {
+        "ScenarioId": "4",
+        "ConditionId": "4"
+    },
+    {
+        "ScenarioId": "5",
+        "ConditionId": "5"
+    }
+]

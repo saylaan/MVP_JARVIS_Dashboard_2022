@@ -1,26 +1,77 @@
-import React, { useEffect, useContext } from 'react';
-import { socket, SocketContext } from '../context/socket'
-import {IoTContext} from "./IoTProvider";
+import React from 'react';
+import { useDispatch } from 'react-redux';
+/* ------------- || External Library Imports || ------------- */
+import io from 'socket.io-client';
+/* ------------- || Action Redux || ------------- */
+import { fetchIot, updateIot } from '../redux/slices';
+import { fetchLog, updateLog } from '../redux/slices';
+
+const socketContext = React.createContext();
+
+const useSocket = () => {
+    const [socket, setSocket] = React.useState(null);
+    const dispatch = useDispatch();
+
+    const connect = () => {
+        const connection = io.connect(`${process.env.REACT_APP_SOCKET_URL}`, { transports: ['websocket'] });
+        connection.on('CONNECT_IOT_TO_FRONT', (iot) => {
+            if (iot) {
+                console.log('Trying to update iot store...');
+                dispatch(fetchIot());
+            }
+        });
+        connection.on('SEND_STATUS_DEVICE_TO_FRONT', (iot) => {
+            if (iot) {
+                console.log('Trying to update iot store...');
+                dispatch(updateIot(iot));
+            }
+        });
+        connection.on('SEND_DATA_TO_FRONT', (idatavalueiot) => {
+            if (idatavalueiot) {
+                console.log('Trying to update log store...');
+                dispatch(fetchLog());
+            }
+        });
+        setSocket(connection);
+    };
+
+    const disconnectSocket = () => {
+        console.log('Disconnecting socket...');
+        if (socket) socket.disconnect();
+    };
+
+    const changeStatusDevice = (iot) => {
+        let newIot = {
+            id: iot.id,
+            name: iot.name,
+            mac: iot.mac,
+            type: iot.type,
+            category: iot.category,
+            version: iot.version,
+            details: iot.details,
+            status: iot.status === 'PAIRED' ? 'IGNORED' : 'PAIRED',
+            socketId: iot.socketId
+        };
+        console.log('Trying to change the status of socketId:', iot.socketId, ' with status:', newIot.status);
+        socket.emit('SEND_STATUS_FRONT_TO_SERVER', iot, newIot.status);
+        dispatch(updateIot(newIot));
+    };
+    const handleConnectionIot = (iot) => {
+        // think to split in two // make a pop up
+        // socket.emit('HANDLE_CONNECTION_IOT', iot);
+    };
+
+    return { socket, connect, disconnectSocket, changeStatusDevice, handleConnectionIot };
+};
 
 export const SocketProvider = ({ children }) => {
-  const iot = useContext(IoTContext);
+    const socket = useSocket();
 
-  useEffect(() => {
-      socket.on('connect-iot', (iot) => {
-          console.log(iot)
-          // Need to fetch new incoming iot here (list IoT)
-      });
-      return () => socket.disconnect();
-  }, [])
-  /*
-  * We have to do an socket.braodcast.emit('change-status-device', status)
-  * when we toggle the device from the front
-  * status : on ou off (string)
-  * const changeStatusDevice = (status) => { socket.broadcast('change-status-device', status)}
-  */
-  return (
-    <SocketContext.Provider value={ socket }>
-      { children }
-    </SocketContext.Provider>
-  )
+    return <socketContext.Provider value={socket}>{children}</socketContext.Provider>;
 };
+
+const SocketConsumer = () => {
+    return React.useContext(socketContext);
+};
+
+export default SocketConsumer;

@@ -5,8 +5,8 @@ module.exports = (sequelize, DataTypes) => {
             unique: true // really important for one data / no more
         },
         active_hash: DataTypes.STRING,
-        salt: DataTypes.STRING,
-    })
+        salt: DataTypes.STRING
+    });
 
-    return User
-}
+    return User;
+};

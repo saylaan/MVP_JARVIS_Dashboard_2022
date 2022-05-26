@@ -1,10 +1,252 @@
-[{
-    "IDatavalueId": 1,
-    "IoTId": 1
-}, {
-    "IDatavalueId": 2,
-    "IoTId": 2
-}, {
-    "IDatavalueId": 3,
-    "IoTId": 3
-}]
+[
+    {
+        "IDatavalueId": 1,
+        "IoTId": 1,
+        "createdAt": "2022-04-03 14:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 2,
+        "IoTId": 1,
+        "createdAt": "2022-04-03 15:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 3,
+        "IoTId": 2,
+        "createdAt": "2022-04-03 14:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 4,
+        "IoTId": 2,
+        "createdAt": "2022-04-03 15:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 5,
+        "IoTId": 3,
+        "createdAt": "2022-04-03 14:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 6,
+        "IoTId": 3,
+        "createdAt": "2022-04-03 15:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 7,
+        "IoTId": 4,
+        "createdAt": "2022-04-03 14:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 8,
+        "IoTId": 4,
+        "createdAt": "2022-04-03 15:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 9,
+        "IoTId": 5,
+        "createdAt": "2022-04-03 14:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 10,
+        "IoTId": 5,
+        "createdAt": "2022-04-04 15:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 11,
+        "IoTId": 1,
+        "createdAt": "2022-04-04 14:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 12,
+        "IoTId": 1,
+        "createdAt": "2022-04-04 15:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 13,
+        "IoTId": 2,
+        "createdAt": "2022-04-04 14:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 14,
+        "IoTId": 2,
+        "createdAt": "2022-04-04 15:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 15,
+        "IoTId": 3,
+        "createdAt": "2022-04-04 14:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 16,
+        "IoTId": 3,
+        "createdAt": "2022-04-04 15:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 17,
+        "IoTId": 4,
+        "createdAt": "2022-04-04 14:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 18,
+        "IoTId": 4,
+        "createdAt": "2022-04-04 15:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 19,
+        "IoTId": 5,
+        "createdAt": "2022-04-04 14:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 20,
+        "IoTId": 5,
+        "createdAt": "2022-04-05 15:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 21,
+        "IoTId": 1,
+        "createdAt": "2022-04-05 14:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 22,
+        "IoTId": 1,
+        "createdAt": "2022-04-05 15:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 23,
+        "IoTId": 2,
+        "createdAt": "2022-04-05 14:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 24,
+        "IoTId": 2,
+        "createdAt": "2022-04-05 15:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 25,
+        "IoTId": 3,
+        "createdAt": "2022-04-05 14:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 26,
+        "IoTId": 3,
+        "createdAt": "2022-04-05 15:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 27,
+        "IoTId": 4,
+        "createdAt": "2022-04-05 14:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 28,
+        "IoTId": 4,
+        "createdAt": "2022-04-05 15:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 29,
+        "IoTId": 5,
+        "createdAt": "2022-04-05 14:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 30,
+        "IoTId": 5,
+        "createdAt": "2022-04-06 15:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 31,
+        "IoTId": 1,
+        "createdAt": "2022-04-06 14:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 32,
+        "IoTId": 1,
+        "createdAt": "2022-04-06 15:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 33,
+        "IoTId": 2,
+        "createdAt": "2022-04-06 14:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 34,
+        "IoTId": 2,
+        "createdAt": "2022-04-06 15:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 35,
+        "IoTId": 3,
+        "createdAt": "2022-04-06 14:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 36,
+        "IoTId": 3,
+        "createdAt": "2022-04-06 15:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 37,
+        "IoTId": 4,
+        "createdAt": "2022-04-06 14:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 38,
+        "IoTId": 4,
+        "createdAt": "2022-04-06 15:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 39,
+        "IoTId": 5,
+        "createdAt": "2022-04-06 14:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 40,
+        "IoTId": 5,
+        "createdAt": "2022-04-07 15:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 41,
+        "IoTId": 1,
+        "createdAt": "2022-04-07 14:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 42,
+        "IoTId": 1,
+        "createdAt": "2022-04-07 15:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 43,
+        "IoTId": 2,
+        "createdAt": "2022-04-07 15:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 44,
+        "IoTId": 2,
+        "createdAt": "2022-04-07 14:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 45,
+        "IoTId": 3,
+        "createdAt": "2022-04-07 15:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 46,
+        "IoTId": 3,
+        "createdAt": "2022-04-07 14:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 47,
+        "IoTId": 4,
+        "createdAt": "2022-04-07 15:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 48,
+        "IoTId": 4,
+        "createdAt": "2022-04-07 14:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 49,
+        "IoTId": 5,
+        "createdAt": "2022-04-07 15:00:00.000 +00:00"
+    },
+    {
+        "IDatavalueId": 50,
+        "IoTId": 5,
+        "createdAt": "2022-04-07 14:00:00.000 +00:00"
+    }
+]

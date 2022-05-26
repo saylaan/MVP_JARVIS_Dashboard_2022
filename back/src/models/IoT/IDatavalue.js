@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
     const IDatavalue = sequelize.define('IDatavalue', {
-        type: {
+        category: {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.TEXT,
             allowNull: false
         }
-    })
-    
-    return IDatavalue
-}
+    });
+
+    return IDatavalue;
+};

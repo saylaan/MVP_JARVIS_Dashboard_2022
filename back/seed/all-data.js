@@ -1,7 +1,5 @@
 const {
     sequelize,
-    Config,
-    ConfigIoT,
     ICategory,
     ICategoryIoT,
     IDatavalue,
@@ -9,124 +7,139 @@ const {
     IoT,
     Room,
     RoomIoT,
-    RoomUser,
+    Action,
+    Trigger,
+    Condition,
     Scenario,
-    ScenarioUser,
+    ScenarioAction,
+    ScenarioCondition,
+    ScenarioTrigger,
     User
-} = require('../src/models')
+} = require('../src/models');
+const Promise = require('bluebird');
+// Users
+const users = require('./User/users.json');
+// IoTs
+const iots = require('./IoT/iots.json');
+// ICategory
+const icategories = require('./IoT/icategories.json');
+const icategoryiots = require('./IoT/icategoryiots.json');
+// IDatavalue
+const idatavalue = require('./IoT/idatavalues.json');
+const idatavalueiots = require('./IoT/idatavalueiots.json');
+// Room
+const rooms = require('./Room/rooms.json');
+const roomiots = require('./Room/roomiots.json');
+// Scenario
+const scenarios = require('./Scenario/scenarios.json');
+const scenariotriggers = require('./Scenario/scenariotriggers.json');
+const scenarioactions = require('./Scenario/scenarioactions.json');
+const scenarioconditions = require('./Scenario/scenarioconditions.json');
+const triggers = require('./Scenario/triggers.json');
+const actions = require('./Scenario/actions.json');
+const conditions = require('./Scenario/conditions.json');
 
-const Promise = require('bluebird')
-
-const users = require('./User/users.json')
-
-const configs = require('./Config/configs.json')
-const configiots = require('./Config/configiots.json')
-
-const iots = require('./IoT/iots.json')
-const icategories = require('./IoT/icategories.json')
-const icategoryiots = require('./IoT/icategoryiots.json')
-const idatavalue = require('./IoT/idatavalues.json')
-const idatavalueiots = require('./IoT/idatavalueiots.json')
-
-const rooms = require('./Room/rooms.json')
-const roomiots = require('./Room/roomiots.json')
-const roomusers = require('./Room/roomusers.json')
-
-const scenarios = require('./Scenario/scenarios.json')
-const scenariousers = require('./Scenario/scenariousers.json')
-
-
-sequelize.sync({ force: true })
-    .then(async function() {
-        /* ####################################################################### */
-        /* ####################           PROMISE         ######################## */
-        /* ####################################################################### */
-        /* USER */
-        await Promise.all(
-            users.map(user => {
-                User.create(user)
-            })
-        )
-        /* ####################################################################### */
-        /* CONFIG */
-        await Promise.all(
-            configs.map(config => {
-                Config.create(config)
-            })
-        )
-        /* ####################################################################### */
-        /* IoT */
-        await Promise.all(
-            iots.map(iot => {
-                IoT.create(iot)
-            })
-        )
-        /* ICATEGORY */
-        await Promise.all(
-            icategories.map(icategory => {
-                ICategory.create(icategory)
-            })
-        )
-        /* IDATAvalue */
-        await Promise.all(
-            idatavalue.map(idatavalue => {
-                IDatavalue.create(idatavalue)
-            })
-        )
-        /* ####################################################################### */
-        /* ROOM */
-        await Promise.all(
-            rooms.map(room => {
-                Room.create(room)
-            })
-        )
-        /* ####################################################################### */
-        /* SCENARIO */
-        await Promise.all(
-            scenarios.map(scenario => {
-                Scenario.create(scenario)
-            })
-            )
-        /* ####################################################################### */
-        /* ########################      FOREIGH KEY     ######################### */
-        /* ####################################################################### */
-        /* ICATEGORY IOT */
-        await Promise.all(
-            icategoryiots.map(icategoryiot => {
-                ICategoryIoT.create(icategoryiot)
-            })
-        )
-        /* IDATAvalue IOT*/
-        await Promise.all(
-            idatavalueiots.map(idatavalueiot => {
-                IDatavalueIoT.create(idatavalueiot)
-            })
-            )
-        /* CONFIG IoT */
-        await Promise.all(
-            configiots.map(configiot => {
-                ConfigIoT.create(configiot)
-            })
-        )
-        /* ROOM IoT*/
-        await Promise.all(
-            roomiots.map(roomiot => {
-                RoomIoT.create(roomiot)
-            })
-        )
-        /* ROOM USER */
-        await Promise.all(
-            roomusers.map(roomuser => {
-                RoomUser.create(roomuser)
-            })
-        )
-        /* SCENARIO USER*/
-        await Promise.all(
-            scenariousers.map(scenariouser => {
-                ScenarioUser.create(scenariouser)
-            })
-        )
-        /* ####################################################################### */
-        /* ####################################################################### */
-        /* ####################################################################### */
-    })
+sequelize.sync({ force: true }).then(async function () {
+    /* ####################################################################### */
+    /* ####################           PROMISE         ######################## */
+    /* ####################################################################### */
+    /* USER */
+    await Promise.all(
+        users.map((user) => {
+            User.create(user);
+        })
+    );
+    /* ####################################################################### */
+    /* IoT */
+    await Promise.all(
+        iots.map((iot) => {
+            IoT.create(iot);
+        })
+    );
+    /* ICATEGORY */
+    await Promise.all(
+        icategories.map((icategory) => {
+            ICategory.create(icategory);
+        })
+    );
+    /* IDATAVALUE */
+    await Promise.all(
+        idatavalue.map((idatavalue) => {
+            IDatavalue.create(idatavalue);
+        })
+    );
+    /* ####################################################################### */
+    /* ROOM */
+    await Promise.all(
+        rooms.map((room) => {
+            Room.create(room);
+        })
+    );
+    /* ####################################################################### */
+    /* SCENARIO */
+    await Promise.all(
+        scenarios.map((scenario) => {
+            Scenario.create(scenario);
+        })
+    );
+    /* ACTION */
+    await Promise.all(
+        actions.map((action) => {
+            Action.create(action);
+        })
+    );
+    /* TRIGGER */
+    await Promise.all(
+        triggers.map((trigger) => {
+            Trigger.create(trigger);
+        })
+    );
+    /* CONDITION */
+    await Promise.all(
+        conditions.map((condition) => {
+            Condition.create(condition);
+        })
+    );
+    /* ####################################################################### */
+    /* ########################      FOREIGH KEY     ######################### */
+    /* ####################################################################### */
+    /* ICATEGORY IOT */
+    await Promise.all(
+        icategoryiots.map((icategoryiot) => {
+            ICategoryIoT.create(icategoryiot);
+        })
+    );
+    /* IDATAvalue IOT */
+    await Promise.all(
+        idatavalueiots.map((idatavalueiot) => {
+            IDatavalueIoT.create(idatavalueiot);
+        })
+    );
+    /* ROOM IOT */
+    await Promise.all(
+        roomiots.map((roomiot) => {
+            RoomIoT.create(roomiot);
+        })
+    );
+    /* SCENARIO TRIGGER */
+    await Promise.all(
+        scenariotriggers.map((scenariotrigger) => {
+            ScenarioTrigger.create(scenariotrigger);
+        })
+    );
+    /* SCENARIO CONDITION */
+    await Promise.all(
+        scenarioconditions.map((scenariocondition) => {
+            ScenarioCondition.create(scenariocondition);
+        })
+    );
+    /* SCENARIO ACTION */
+    await Promise.all(
+        scenarioactions.map((scenarioaction) => {
+            ScenarioAction.create(scenarioaction);
+        })
+    );
+    /* ####################################################################### */
+    /* ####################################################################### */
+    /* ####################################################################### */
+});

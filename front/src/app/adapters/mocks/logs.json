@@ -1,0 +1,9 @@
+{
+    "logs": [
+        {
+            "time": "2015-10-02:15:00",
+            "type": "sensor",
+            "status": true
+        }
+    ]
+}

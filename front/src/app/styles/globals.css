@@ -1,0 +1,47 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #ffffff;
+    /* color: #ffffff; */
+}
+#root {
+    width: 100%;
+    height: 100%;
+}
+.MuiDataGrid-root {
+    min-height: 560px;
+}
+.edit-form {
+    margin-top: 20px;
+    min-width: 500px;
+}
+.edit-form > div {
+    margin: 20px;
+    width: 100%;
+}
+.edit-form > button {
+    margin: 20px;
+}
+.MuiTextField-root {
+    margin: 20px 0;
+}
+.MuiFormControl-root {
+    display: flex;
+}
+.MuiFormControl-root div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+}
+.flex-col .MuiCardContent-root {
+    flex-direction: column;
+    justify-content: space-around;
+}
+.MuiInputAdornment-root {
+    position: absolute !important;
+    right: 15px;
+    width: auto !important;
+}

@@ -3,7 +3,8 @@ module.exports = (sequelize, DataTypes) => {
         name: DataTypes.STRING,
         mac: {
             type: DataTypes.STRING,
-            unique: true
+            unique: true,
+            allowNull: false
         },
         type: DataTypes.STRING,
         category: DataTypes.STRING,
@@ -12,9 +13,10 @@ module.exports = (sequelize, DataTypes) => {
         status: DataTypes.STRING,
         socketId: {
             type: DataTypes.STRING,
-            unique: true
+            unique: true,
+            allowNull: false
         }
-    })
-    
-    return IoT
-}
+    });
+
+    return IoT;
+};

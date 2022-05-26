@@ -1,8 +1,10 @@
-const path = require('path') // import function of path (__dirname)
+const path = require('path'); // import function of path (__dirname)
 
-module.exports = { // basic config for the server
+module.exports = {
+    // basic config for the server
     portHttp: 8080,
-    db: { // maybe i should use mysql instead
+    db: {
+        // maybe i should use mysql instead
         database: process.env.DB_NAME || 'tabtracker', // name of DB
         user: process.env.DB_USER || 'tabtracker',
         password: process.env.DB_PASS || 'tabtracker',
@@ -15,4 +17,4 @@ module.exports = { // basic config for the server
     authentication: {
         jwtSecret: process.env.JWT_SECRET || 'secret'
     }
-}
+};

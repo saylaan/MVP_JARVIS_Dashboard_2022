@@ -1,92 +1,97 @@
-const { ICategoryIoT, ICategory, IoT } = require('../../models')
-const _ = require('lodash')
+const { ICategoryIoT, ICategory, IoT } = require('../../models');
+const _ = require('lodash');
 
 module.exports = {
     async index(req, res) {
         try {
             const icategoryiots = await ICategoryIoT.findAll({
-                include: [{
-                        model: ICategory,
+                include: [
+                    {
+                        model: ICategory
                     },
                     {
-                        model: IoT,
-                    },
-                ],
-            })
-            res.send(icategoryiots)
+                        model: IoT
+                    }
+                ]
+            });
+            res.send(icategoryiots);
         } catch (err) {
             res.status(500).send({
-                err: 'An error has occured while trying to get the ICategory IoTs',
-            })
+                err: 'An error has occured while trying to get the ICategory IoTs'
+            });
         }
     },
     async getICategoryIoTs(req, res) {
         try {
             const icategoryiots = await ICategoryIoT.findAll({
                 where: {
-                    ICategoryId: req.params.icategoryId,
+                    ICategoryId: req.params.icategoryId
                 },
-                include: [{
-                        model: ICategory,
+                include: [
+                    {
+                        model: ICategory
                     },
                     {
-                        model: IoT,
-                    },
-                ],
-            })
-            res.send(icategoryiots)
+                        model: IoT
+                    }
+                ]
+            });
+            res.send(icategoryiots);
         } catch (err) {
             res.status(500).send({
-                err: 'An error has occured while trying to get the ICategor IoTs',
-            })
+                err: 'An error has occured while trying to get the ICategor IoTs'
+            });
         }
     },
     async getIoTICategories(req, res) {
         try {
             const ioticategories = await ICategoryIoT.findAll({
                 where: {
-                    IoTId: req.params.iotId,
+                    IoTId: req.params.iotId
                 },
-                include: [{
-                    model: IoT,
-                }, {
-                    model: ICategory,
-                }],
-            })
-            res.send(ioticategories)
+                include: [
+                    {
+                        model: IoT
+                    },
+                    {
+                        model: ICategory
+                    }
+                ]
+            });
+            res.send(ioticategories);
         } catch (err) {
             res.status(500).send({
-                err: 'An error has occured while trying to get the Device ICategorys',
-            })
+                err: 'An error has occured while trying to get the Device ICategorys'
+            });
         }
     },
     async post(req, res) {
         try {
-            const { ICategoryId, IoTId } = req.body
+            const { ICategoryId, IoTId } = req.body;
             const icategoryiot = await ICategoryIoT.create({
                 ICategoryId: ICategoryId,
-                IoTId: IoTId,
-            })
-            res.send(icategoryiot)
+                IoTId: IoTId
+            });
+            res.send(icategoryiot);
         } catch (err) {
             res.status(500).send({
-                err: 'An error has occured while trying to create the ICategory for the Device',
-            })
+                err: 'An error has occured while trying to create the ICategory for the Device'
+            });
         }
     },
     async delete(req, res) {
         try {
-            const { icategoryiotId } = req.params
+            const { icategoryiotId } = req.params;
 
             const icategoryiot = await ICategoryIoT.findOne({
                 where: {
-                    id: icategoryiotId,
-                },
-            })
+                    id: icategoryiotId
+                }
+            });
             if (!icategoryiot) {
                 return res.status(403).send({
-                    error: 'you do not have access to this ICategory Device',
-                })
+                    error: 'you do not have access to this ICategory Device'
+                });
             }
             // await ICategoryIoT.findAll({
             //     where: {
@@ -97,12 +102,12 @@ module.exports = {
             //         await IcategoryIoT.destroy()
             //     });
             // });
-            await icategoryiot.destroy()
-            res.send(icategoryiot)
+            await icategoryiot.destroy();
+            res.send(icategoryiot);
         } catch (err) {
             res.status(500).send({
-                err: 'An error has occured while trying to delete the ICategory Device',
-            })
+                err: 'An error has occured while trying to delete the ICategory Device'
+            });
         }
     },
     async put(req, res) {
@@ -111,12 +116,12 @@ module.exports = {
                 where: {
                     id: req.params.icategoryiotId
                 }
-            })
-            res.send(icategoryiot)
+            });
+            res.send(icategoryiot);
         } catch (err) {
             res.status(500).send({
                 err: 'An error has occured while trying to update the ICategory Device'
-            })
+            });
         }
     }
-}
+};

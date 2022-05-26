@@ -4,8 +4,9 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false,
             unique: true
-        }
-    })
-    
-    return ICategory
-}
+        },
+        description: DataTypes.STRING
+    });
+
+    return ICategory;
+};

@@ -1,0 +1,18 @@
+[
+    {
+        "ScenarioId": "2",
+        "TriggerId": "1"
+    },
+    {
+        "ScenarioId": "3",
+        "TriggerId": "2"
+    },
+    {
+        "ScenarioId": "4",
+        "TriggerId": "3"
+    },
+    {
+        "ScenarioId": "5",
+        "TriggerId": "4"
+    }
+]

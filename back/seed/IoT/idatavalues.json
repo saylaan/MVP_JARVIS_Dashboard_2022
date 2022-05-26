@@ -1,10 +1,252 @@
-[{
-    "type": "interuptor",
-    "value": "on"
-}, {
-    "type": "interuptor",
-    "value": "off"
-}, {
-    "type": "interuptor",
-    "value": "off"
-}]
+[
+    {
+        "value": "ON",
+        "category": "light",
+        "createdAt": "2022-04-03 14:00:00.000 +00:00"
+    },
+    {
+        "value": "OFF",
+        "category": "light",
+        "createdAt": "2022-04-03 15:00:00.000 +00:00"
+    },
+    {
+        "value": "ON",
+        "category": "fan",
+        "createdAt": "2022-04-03 14:00:00.000 +00:00"
+    },
+    {
+        "value": "OFF",
+        "category": "fan",
+        "createdAt": "2022-04-03 15:00:00.000 +00:00"
+    },
+    {
+        "value": "1",
+        "category": "lightsensor",
+        "createdAt": "2022-04-03 14:00:00.000 +00:00"
+    },
+    {
+        "value": "0",
+        "category": "lightsensor",
+        "createdAt": "2022-04-03 15:00:00.000 +00:00"
+    },
+    {
+        "value": "1",
+        "category": "motionsensor",
+        "createdAt": "2022-04-03 15:00:00.000 +00:00"
+    },
+    {
+        "value": "0",
+        "category": "motionsensor",
+        "createdAt": "2022-04-03 14:00:00.000 +00:00"
+    },
+    {
+        "value": "1",
+        "category": "interuptorsensor",
+        "createdAt": "2022-04-03 15:00:00.000 +00:00"
+    },
+    {
+        "value": "0",
+        "category": "interuptorsensor",
+        "createdAt": "2022-04-03 14:00:00.000 +00:00"
+    },
+    {
+        "value": "ON",
+        "category": "light",
+        "createdAt": "2022-04-04 15:00:00.000 +00:00"
+    },
+    {
+        "value": "OFF",
+        "category": "light",
+        "createdAt": "2022-04-04 14:00:00.000 +00:00"
+    },
+    {
+        "value": "ON",
+        "category": "fan",
+        "createdAt": "2022-04-04 15:00:00.000 +00:00"
+    },
+    {
+        "value": "OFF",
+        "category": "fan",
+        "createdAt": "2022-04-04 14:00:00.000 +00:00"
+    },
+    {
+        "value": "1",
+        "category": "lightsensor",
+        "createdAt": "2022-04-04 15:00:00.000 +00:00"
+    },
+    {
+        "value": "0",
+        "category": "lightsensor",
+        "createdAt": "2022-04-04 14:00:00.000 +00:00"
+    },
+    {
+        "value": "1",
+        "category": "motionsensor",
+        "createdAt": "2022-04-04 15:00:00.000 +00:00"
+    },
+    {
+        "value": "0",
+        "category": "motionsensor",
+        "createdAt": "2022-04-04 14:00:00.000 +00:00"
+    },
+    {
+        "value": "1",
+        "category": "interuptorsensor",
+        "createdAt": "2022-04-04 15:00:00.000 +00:00"
+    },
+    {
+        "value": "0",
+        "category": "interuptorsensor",
+        "createdAt": "2022-04-04 14:00:00.000 +00:00"
+    },
+    {
+        "value": "ON",
+        "category": "light",
+        "createdAt": "2022-04-05 15:00:00.000 +00:00"
+    },
+    {
+        "value": "OFF",
+        "category": "light",
+        "createdAt": "2022-04-05 14:00:00.000 +00:00"
+    },
+    {
+        "value": "ON",
+        "category": "fan",
+        "createdAt": "2022-04-05 15:00:00.000 +00:00"
+    },
+    {
+        "value": "OFF",
+        "category": "fan",
+        "createdAt": "2022-04-05 14:00:00.000 +00:00"
+    },
+    {
+        "value": "1",
+        "category": "lightsensor",
+        "createdAt": "2022-04-05 15:00:00.000 +00:00"
+    },
+    {
+        "value": "0",
+        "category": "lightsensor",
+        "createdAt": "2022-04-05 14:00:00.000 +00:00"
+    },
+    {
+        "value": "1",
+        "category": "motionsensor",
+        "createdAt": "2022-04-05 15:00:00.000 +00:00"
+    },
+    {
+        "value": "0",
+        "category": "motionsensor",
+        "createdAt": "2022-04-05 14:00:00.000 +00:00"
+    },
+    {
+        "value": "1",
+        "category": "interuptorsensor",
+        "createdAt": "2022-04-05 15:00:00.000 +00:00"
+    },
+    {
+        "value": "0",
+        "category": "interuptorsensor",
+        "createdAt": "2022-04-05 14:00:00.000 +00:00"
+    },
+    {
+        "value": "ON",
+        "category": "light",
+        "createdAt": "2022-04-06 15:00:00.000 +00:00"
+    },
+    {
+        "value": "OFF",
+        "category": "light",
+        "createdAt": "2022-04-06 14:00:00.000 +00:00"
+    },
+    {
+        "value": "ON",
+        "category": "fan",
+        "createdAt": "2022-04-06 15:00:00.000 +00:00"
+    },
+    {
+        "value": "OFF",
+        "category": "fan",
+        "createdAt": "2022-04-06 14:00:00.000 +00:00"
+    },
+    {
+        "value": "1",
+        "category": "lightsensor",
+        "createdAt": "2022-04-06 15:00:00.000 +00:00"
+    },
+    {
+        "value": "0",
+        "category": "lightsensor",
+        "createdAt": "2022-04-06 14:00:00.000 +00:00"
+    },
+    {
+        "value": "1",
+        "category": "motionsensor",
+        "createdAt": "2022-04-06 15:00:00.000 +00:00"
+    },
+    {
+        "value": "0",
+        "category": "motionsensor",
+        "createdAt": "2022-04-06 15:00:00.000 +00:00"
+    },
+    {
+        "value": "1",
+        "category": "interuptorsensor",
+        "createdAt": "2022-04-06 14:00:00.000 +00:00"
+    },
+    {
+        "value": "0",
+        "category": "interuptorsensor",
+        "createdAt": "2022-04-06 15:00:00.000 +00:00"
+    },
+    {
+        "value": "ON",
+        "category": "light",
+        "createdAt": "2022-04-07 14:00:00.000 +00:00"
+    },
+    {
+        "value": "OFF",
+        "category": "light",
+        "createdAt": "2022-04-07 15:00:00.000 +00:00"
+    },
+    {
+        "value": "ON",
+        "category": "fan",
+        "createdAt": "2022-04-07 14:00:00.000 +00:00"
+    },
+    {
+        "value": "OFF",
+        "category": "fan",
+        "createdAt": "2022-04-07 15:00:00.000 +00:00"
+    },
+    {
+        "value": "1",
+        "category": "lightsensor",
+        "createdAt": "2022-04-07 14:00:00.000 +00:00"
+    },
+    {
+        "value": "0",
+        "category": "lightsensor",
+        "createdAt": "2022-04-07 15:00:00.000 +00:00"
+    },
+    {
+        "value": "1",
+        "category": "motionsensor",
+        "createdAt": "2022-04-07 14:00:00.000 +00:00"
+    },
+    {
+        "value": "0",
+        "category": "motionsensor",
+        "createdAt": "2022-04-07 15:00:00.000 +00:00"
+    },
+    {
+        "value": "1",
+        "category": "interuptorsensor",
+        "createdAt": "2022-04-07 14:00:00.000 +00:00"
+    },
+    {
+        "value": "0",
+        "category": "interuptorsensor",
+        "createdAt": "2022-04-07 15:00:00.000 +00:00"
+    }
+]
